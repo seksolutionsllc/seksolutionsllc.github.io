@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:,">
+<title>SEK Solutions LLC — Certified SDVOSB | Safety Training & Consulting — Sylvania, Ohio</title>
+<meta name="description" content="SEK Solutions LLC is a certified Service-Disabled Veteran-Owned Small Business in Sylvania, Ohio providing safety training delivery, safety consulting, e-learning & course development, and security consulting.">
+<style>
+  :root{
+    --navy:#0f2a44; --navy-2:#16365a; --navy-deep:#0a1e33;
+    --ink:#1a2533; --slate:#4a5a6b; --slate-light:#6b7d90;
+    --line:#d9e0e8; --line-dark:#c3cedb;
+    --bg:#ffffff; --bg-alt:#f2f5f8; --bg-card:#ffffff;
+    --accent:#b7791f; --accent-dark:#8f5f14;
+    --accent-bg:#fdf6e3;
+    --green:#1e6b3a; --green-bg:#eaf4ec;
+    --header-bg:#0f2a44; --header-text:#ffffff; --header-muted:#b9c9dc;
+    --footer-bg:#0a1e33; --footer-text:#c8d6e6; --footer-muted:#7f96b0;
+    --shadow:0 1px 3px rgba(15,42,68,.08),0 4px 14px rgba(15,42,68,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#e8eef4; --slate:#a8b8c8; --slate-light:#8699ad;
+      --line:#2a3d52; --line-dark:#354a63;
+      --bg:#0d1826; --bg-alt:#122133; --bg-card:#142638;
+      --accent:#d9a441; --accent-dark:#d9a441; --accent-bg:#2a2412;
+      --green:#5cc07e; --green-bg:#152b1c;
+      --shadow:0 1px 3px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16.5px;-webkit-font-smoothing:antialiased}
+  a{color:var(--navy-2)}
+  @media (prefers-color-scheme: dark){ a{color:#7fb0e0} }
+  h1,h2,h3,h4{line-height:1.2;color:var(--ink);margin:0}
+  p{margin:0}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* HEADER */
+  .site-header{position:sticky;top:0;z-index:50;background:var(--header-bg);border-bottom:3px solid var(--accent)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;min-height:44px}
+  .brand-mark{width:44px;height:44px;flex:none;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;letter-spacing:.04em;border-radius:4px}
+  .brand-text{line-height:1.15}
+  .brand-name{font-size:19px;font-weight:700;letter-spacing:.01em;color:#fff}
+  .brand-sub{font-size:11.5px;color:var(--header-muted);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+  nav.main-nav{display:flex;gap:2px;flex-wrap:wrap}
+  nav.main-nav a{color:#e6eef6;text-decoration:none;font-size:15px;font-weight:500;padding:10px 14px;min-height:44px;display:inline-flex;align-items:center;border-radius:4px}
+  nav.main-nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+
+  /* HERO */
+  .hero{background:var(--navy);color:#fff;padding:56px 0 0}
+  @media (prefers-color-scheme: dark){ .hero{background:#0a1c30} }
+  .hero-grid{display:grid;grid-template-columns:1.55fr .9fr;gap:40px;align-items:start}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#f0c96a;border:1px solid rgba(240,201,106,.45);padding:6px 12px;border-radius:999px;margin-bottom:20px}
+  .hero h1{color:#fff;font-size:44px;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
+  .hero .hero-sub{font-size:20px;color:#d3e0ee;font-weight:400;line-height:1.45;margin-bottom:18px;max-width:34em}
+  .hero .hero-lede{font-size:17px;color:#eef3f8;line-height:1.65;max-width:36em;margin-bottom:28px}
+  .hero .hero-lede strong{color:#fff}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:6px;font-size:16px;font-weight:600;text-decoration:none;border:1px solid transparent;cursor:pointer}
+  .btn-gold{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .btn-gold:hover{background:var(--accent-dark)}
+  .btn-outline{background:transparent;color:#fff;border-color:#7d97b5}
+  .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-2)}
+  .hero-facts{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:22px}
+  .hero-facts h2{color:#fff;font-size:13px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:14px;font-weight:700}
+  .hero-facts dl{margin:0;display:grid;gap:12px}
+  .hero-facts .row{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:12px}
+  .hero-facts .row:last-child{border-bottom:none;padding-bottom:0}
+  .hero-facts dt{font-size:13.5px;color:#b9c9dc}
+  .hero-facts dd{margin:0;font-size:14.5px;font-weight:600;color:#fff;text-align:right;font-variant-numeric:tabular-nums}
+  .cert-strip{margin-top:44px;border-top:1px solid rgba(255,255,255,.16);padding:18px 0 22px;display:flex;gap:10px 28px;flex-wrap:wrap;align-items:center}
+  .cert-strip .label{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#93a9c0;font-weight:700}
+  .cert-item{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:#fff}
+  .cert-item .dot{width:8px;height:8px;border-radius:50%;background:#4ade80;flex:none}
+  .cert-item .sub{font-weight:400;color:#b9c9dc;font-size:13.5px}
+
+  /* SECTIONS */
+  section.block{padding:64px 0}
+  section.block.alt{background:var(--bg-alt)}
+  .sec-head{max-width:760px;margin-bottom:36px}
+  .sec-kicker{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:10px}
+  .sec-head h2{font-size:32px;font-weight:750;letter-spacing:-.01em;margin-bottom:12px}
+  .sec-head p{color:var(--slate);font-size:17px}
+
+  /* SERVICES OVERVIEW (home) */
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .svc-card{background:var(--bg-card);border:1px solid var(--line);border-radius:8px;padding:26px;box-shadow:var(--shadow)}
+  .svc-card .num{font-size:13px;font-weight:800;color:var(--accent-dark);letter-spacing:.06em;margin-bottom:10px}
+  .svc-card h3{font-size:20px;margin-bottom:8px}
+  .svc-card p{color:var(--slate);font-size:15.5px;margin-bottom:14px}
+  .svc-card a{font-weight:600;font-size:15px;text-decoration:none;display:inline-flex;min-height:36px;align-items:center}
+  .svc-card a:hover{text-decoration:underline}
+  .naics-tag{display:inline-block;font-size:12.5px;font-weight:600;background:var(--bg-alt);border:1px solid var(--line);color:var(--slate);padding:3px 9px;border-radius:999px;margin:0 6px 6px 0;font-variant-numeric:tabular-nums}
+
+  /* SERVICE DETAIL */
+  .detail{display:grid;grid-template-columns:300px 1fr;gap:36px;padding:36px 0;border-top:1px solid var(--line)}
+  .detail:first-of-type{border-top:none;padding-top:8px}
+  .detail-side h3{font-size:22px;margin-bottom:8px}
+  .detail-side p{color:var(--slate);font-size:15px}
+  .detail-body p{color:var(--slate);margin-bottom:16px;max-width:46em}
+  .detail-body p strong{color:var(--ink)}
+  .course-list{columns:2;column-gap:32px;margin:0;padding:0;list-style:none}
+  .course-list li{break-inside:avoid;padding:9px 0 9px 22px;position:relative;border-bottom:1px solid var(--line);font-size:15.5px}
+  .course-list li::before{content:"";position:absolute;left:2px;top:17px;width:7px;height:7px;background:var(--accent);border-radius:2px}
+  .plain-list{margin:0;padding:0;list-style:none}
+  .plain-list li{padding:9px 0 9px 22px;position:relative;border-bottom:1px solid var(--line);font-size:15.5px;color:var(--slate)}
+  .plain-list li::before{content:"";position:absolute;left:2px;top:17px;width:7px;height:7px;background:var(--accent);border-radius:2px}
+  .plain-list li strong{color:var(--ink)}
+  .plain-list li:last-child,.course-list li:last-child{border-bottom:none}
+  .note-box{background:var(--accent-bg);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;padding:18px 20px;font-size:15.5px}
+  .note-box strong{display:block;margin-bottom:4px}
+
+  /* STATS */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:36px 0}
+  .stat{background:var(--bg-card);border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:6px;padding:22px;text-align:left}
+  @media (prefers-color-scheme: dark){ .stat{border-top-color:var(--accent)} }
+  .stat .big{font-size:34px;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.05}
+  @media (prefers-color-scheme: dark){ .stat .big{color:#fff} }
+  .stat .lbl{font-size:14px;color:var(--slate);margin-top:6px;line-height:1.45}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+  .bio-card{background:var(--bg-card);border:1px solid var(--line);border-radius:8px;padding:28px;box-shadow:var(--shadow)}
+  .bio-card h3{font-size:21px;margin-bottom:4px}
+  .bio-card .role{color:var(--accent-dark);font-weight:600;font-size:15px;margin-bottom:16px}
+  .bio-card p{color:var(--slate);font-size:15.5px;margin-bottom:12px}
+  .bio-card p:last-child{margin-bottom:0}
+  .bio-card p strong{color:var(--ink)}
+
+  /* CONTRACTING */
+  .reg-table{width:100%;border-collapse:collapse;background:var(--bg-card);border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:15.5px}
+  .reg-table th,.reg-table td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  .reg-table tr:last-child th,.reg-table tr:last-child td{border-bottom:none}
+  .reg-table th{width:230px;color:var(--slate);font-weight:600;background:var(--bg-alt);font-size:14.5px}
+  .reg-table td{font-weight:500}
+  .reg-table td .mono{font-variant-numeric:tabular-nums;letter-spacing:.02em}
+  .status-pill{display:inline-block;font-size:12.5px;font-weight:700;color:var(--green);background:var(--green-bg);padding:2px 10px;border-radius:999px;margin-left:8px;vertical-align:1px}
+  .diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 36px}
+  .diff-item{padding:16px 0;border-bottom:1px solid var(--line)}
+  .diff-item h4{font-size:16.5px;margin-bottom:5px}
+  .diff-item p{color:var(--slate);font-size:15px}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:28px}
+  .contact-card{background:var(--bg-card);border:1px solid var(--line);border-radius:8px;padding:24px;box-shadow:var(--shadow)}
+  .contact-card h3{font-size:16px;margin-bottom:6px}
+  .contact-card p{color:var(--slate);font-size:14.5px;margin-bottom:14px;min-height:44px}
+  .contact-card a.email{font-weight:600;font-size:15px;word-break:break-all;text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+  .contact-card a.email:hover{text-decoration:underline}
+  .addr-bar{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .addr-box{border:1px solid var(--line);border-radius:8px;padding:22px 24px;background:var(--bg-card)}
+  .addr-box h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
+  .addr-box p{font-size:16px;font-weight:500}
+  .addr-box p span{display:block;color:var(--slate);font-weight:400;font-size:15px;margin-top:4px}
+
+  /* FOOTER */
+  footer{background:var(--footer-bg);color:var(--footer-text);padding:44px 0 34px;margin-top:0}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px;margin-bottom:30px}
+  footer h3{color:#fff;font-size:15px;margin-bottom:12px}
+  footer p,footer li{font-size:14.5px;color:var(--footer-text)}
+  footer ul{list-style:none;margin:0;padding:0}
+  footer li{margin-bottom:7px}
+  footer a{color:#e6eef6;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--footer-muted)}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero h1{font-size:36px}
+    .svc-grid,.two-col,.diff-grid,.contact-grid,.addr-bar,.footer-grid{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .detail{grid-template-columns:1fr;gap:14px}
+    .course-list{columns:1}
+    section.block{padding:48px 0}
+    .reg-table th{width:150px}
+    .header-inner{justify-content:flex-start}
+    nav.main-nav{width:100%}
+  }
+  @media (max-width:480px){ .stats{grid-template-columns:1fr 1fr} .hero h1{font-size:32px} }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#home" aria-label="SEK Solutions LLC — home">
+      <span class="brand-mark" aria-hidden="true">SEK</span>
+      <span class="brand-text">
+        <span class="brand-name">SEK Solutions LLC</span>
+        <span class="brand-sub" style="display:block">Sylvania, Ohio</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contracting">Contracting</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+
+  <!-- ============ HERO ============ -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="hero-eyebrow">Certified SDVOSB &nbsp;·&nbsp; VOSB</span>
+          <h1>SEK Solutions LLC</h1>
+          <p class="hero-sub">A certified Service-Disabled Veteran-Owned small business providing safety training and consulting.</p>
+          <p class="hero-lede">Safety training lands differently when the instructor has actually run the program. SEK Solutions is led by an operator who has <strong>run the safety program, not just taught it</strong> — more than a decade of 24/7, safety-critical terminal operations behind every course, audit, and briefing we deliver.</p>
+          <div class="cta-row">
+            <a class="btn btn-gold" href="mailto:contracts@seksolutionsllc.com">Discuss a Contract or Teaming</a>
+            <a class="btn btn-outline" href="#services">View Services</a>
+          </div>
+        </div>
+        <aside class="hero-facts" aria-label="Company registration facts">
+          <h2>Company Facts</h2>
+          <dl>
+            <div class="row"><dt>UEI</dt><dd>EZRPSEHWNG25</dd></div>
+            <div class="row"><dt>CAGE Code</dt><dd>23UF5</dd></div>
+            <div class="row"><dt>Primary NAICS</dt><dd>611430</dd></div>
+            <div class="row"><dt>SAM.gov</dt><dd>Active thru Aug 6, 2027</dd></div>
+            <div class="row"><dt>Headquarters</dt><dd>Sylvania, Ohio</dd></div>
+          </dl>
+        </aside>
+      </div>
+      <div class="cert-strip" aria-label="Certifications">
+        <span class="label">Certifications</span>
+        <span class="cert-item"><span class="dot"></span>SDVOSB <span class="sub">— SBA VetCert, Active</span></span>
+        <span class="cert-item"><span class="dot"></span>VOSB <span class="sub">— SBA VetCert, Active</span></span>
+        <span class="cert-item"><span class="dot"></span>SAM.gov <span class="sub">— Registered &amp; Active</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SERVICES OVERVIEW ============ -->
+  <section class="block" aria-labelledby="overview-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">What We Do</div>
+        <h2 id="overview-h">Four service areas, one standard: work done safely, documented properly</h2>
+        <p>SEK Solutions delivers training and consulting for government and industrial customers who operate around the clock — scheduled to fit real shift patterns, and taught by the person accountable for the result.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc-card">
+          <div class="num">01</div>
+          <h3>Safety Training Delivery</h3>
+          <p>Owner-delivered, on-site safety training — fall protection, lockout/tagout, lifts, forklifts, fire safety, hazard analysis, and incident-investigation method.</p>
+          <span class="naics-tag">NAICS 611430</span><br>
+          <a href="#service-training">Training details &rarr;</a>
+        </article>
+        <article class="svc-card">
+          <div class="num">02</div>
+          <h3>Safety Consulting</h3>
+          <p>Safety audits, program development, and compliance support for operations that need a program that holds up in the field and on paper.</p>
+          <span class="naics-tag">NAICS 541690</span><br>
+          <a href="#service-consulting">Consulting details &rarr;</a>
+        </article>
+        <article class="svc-card">
+          <div class="num">03</div>
+          <h3>E-Learning &amp; Course Development</h3>
+          <p>E-learning production, curriculum and course writing, and instructional design — training content built by someone who knows the work it teaches.</p>
+          <span class="naics-tag">NAICS 611710</span><span class="naics-tag">NAICS 512110</span><br>
+          <a href="#service-elearning">Development details &rarr;</a>
+        </article>
+        <article class="svc-card">
+          <div class="num">04</div>
+          <h3>Security Consulting</h3>
+          <p>Security assessments and program reviews. Advisory work only — SEK Solutions does not provide guard services or staffing.</p>
+          <span class="naics-tag">Assessments &amp; Reviews</span><br>
+          <a href="#service-security">Security details &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES DETAIL ============ -->
+  <section class="block alt" id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Services</div>
+        <h2 id="services-h">Services in detail</h2>
+        <p>Every engagement is owner-delivered. The person who bids the work is the person who teaches, audits, and writes it.</p>
+      </div>
+
+      <div class="detail" id="service-training">
+        <div class="detail-side">
+          <h3>Safety Training Delivery</h3>
+          <p>Primary NAICS 611430 — Professional &amp; Management Development Training</p>
+        </div>
+        <div class="detail-body">
+          <p><strong>On-site, owner-delivered training, scheduled to fit facility shift patterns</strong> — day, evening, and night sessions available, so crews train on their own shift instead of being pulled off it. Courses are built for industrial and government facilities where the work is physical, the hazards are real, and attendance and completion have to be documented.</p>
+          <ul class="course-list">
+            <li>Fall protection and ladder safety</li>
+            <li>Lockout/tagout (LOTO) awareness and procedure discipline</li>
+            <li>Aerial / scissor lift safety</li>
+            <li>Forklift and powered industrial truck safety awareness</li>
+            <li>Fire safety and extinguisher basics</li>
+            <li>Job hazard analysis and pre-task briefings</li>
+            <li>Incident-investigation method — root-cause documentation from camera and record review</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="detail" id="service-consulting">
+        <div class="detail-side">
+          <h3>Safety Consulting</h3>
+          <p>NAICS 541690 — Other Scientific &amp; Technical Consulting Services</p>
+        </div>
+        <div class="detail-body">
+          <p>Practical safety consulting grounded in operating experience — not template programs. SEK Solutions helps facilities find the gaps between the written program and what actually happens on the floor, then close them.</p>
+          <ul class="plain-list">
+            <li><strong>Safety audits</strong> — facility and program audits with findings documented in plain, actionable terms</li>
+            <li><strong>Program development</strong> — building or rebuilding safety programs, procedures, and briefing disciplines that crews will actually use</li>
+            <li><strong>Compliance support</strong> — help aligning day-to-day practice with the requirements the facility operates under</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="detail" id="service-elearning">
+        <div class="detail-side">
+          <h3>E-Learning &amp; Course Development</h3>
+          <p>NAICS 611710 / 512110 — Educational Support Services / Video Production</p>
+        </div>
+        <div class="detail-body">
+          <p>When training has to scale beyond the classroom — across shifts, sites, or a distributed workforce — SEK Solutions builds it as content. Subject-matter depth comes first: the material is written by an operator, then produced as training your people can complete anywhere.</p>
+          <ul class="plain-list">
+            <li><strong>E-learning production</strong> — complete, ready-to-deliver training content</li>
+            <li><strong>Curriculum &amp; course writing</strong> — structured courses built from your procedures and requirements</li>
+            <li><strong>Instructional design</strong> — learning objectives, assessments, and materials designed for retention, not just completion</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="detail" id="service-security">
+        <div class="detail-side">
+          <h3>Security Consulting</h3>
+          <p>Assessments &amp; program reviews</p>
+        </div>
+        <div class="detail-body">
+          <p>Advisory security consulting informed by a Military Police background and years of securing a critical-infrastructure rail terminal: an outside set of experienced eyes on your posture, procedures, and weak points.</p>
+          <ul class="plain-list">
+            <li><strong>Security assessments</strong> — structured reviews of facilities, procedures, and vulnerabilities</li>
+            <li><strong>Program reviews</strong> — evaluation of existing security programs with documented recommendations</li>
+          </ul>
+          <div class="note-box" style="margin-top:18px">
+            <strong>Scope note</strong>
+            SEK Solutions provides assessments and program reviews only. We do not provide guard services, patrol, or security staffing.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="block" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">About</div>
+        <h2 id="about-h">An operator-led company, new to federal contracting — and direct about it</h2>
+        <p>SEK Solutions LLC was founded in 2026 in Sylvania, Ohio. It is a new federal entrant built on deep operating experience: the company's capability is its owner's career, offered directly.</p>
+      </div>
+
+      <div class="stats" aria-label="Owner operating record">
+        <div class="stat"><div class="big">300+</div><div class="lbl">Union personnel in the operation he leads</div></div>
+        <div class="stat"><div class="big">12+</div><div class="lbl">Yard crews working a 24/7 terminal operation</div></div>
+        <div class="stat"><div class="big">Zero</div><div class="lbl">Recordable injuries — a zero-recordable safety record</div></div>
+        <div class="stat"><div class="big">1M+</div><div class="lbl">Man-hours worked under that safety record</div></div>
+      </div>
+
+      <div class="two-col">
+        <div class="bio-card">
+          <h3>James K. Koehler</h3>
+          <div class="role">Owner &amp; Principal — SEK Solutions LLC</div>
+          <p><strong>Senior Terminal Operations Manager, Norfolk Southern Railway</strong> — with Norfolk Southern since 2014, and in the senior terminal role since September 2024. He leads a 24/7, safety-critical rail terminal operation: <strong>300+ union personnel and 12+ yard crews</strong>, with a <strong>zero-recordable safety record across more than one million man-hours</strong> in an FRA/OSHA-regulated environment.</p>
+          <p><strong>U.S. Army — Military Police Sergeant (E-5), 2011–2018.</strong> Military police operations and leadership experience that underpins the company's security consulting practice.</p>
+          <p>At SEK Solutions, James is the instructor, the consultant, and the point of contact. There is no handoff — the person who bids is the person who teaches.</p>
+        </div>
+        <div>
+          <div class="note-box" style="margin-bottom:20px">
+            <strong>Federal past performance — none yet</strong>
+            SEK Solutions is a new entrant (founded 2026) and has no federal past performance to claim. What we offer instead is <strong>key-personnel experience</strong>: 12+ years running safety-critical operations at scale, with the record to show for it. We would rather state that plainly than dress it up.
+          </div>
+          <div class="bio-card">
+            <h3 style="font-size:18px">How we work</h3>
+            <p><strong>Owner-delivered.</strong> Every course, audit, and deliverable comes from the owner — which also satisfies services self-performance requirements.</p>
+            <p><strong>Shift-flexible.</strong> Delivery across day, evening, and night sessions, built around a 24/7 operation's reality.</p>
+            <p><strong>Direct.</strong> A single point of contact and direct scheduling. No account managers, no layers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTRACTING ============ -->
+  <section class="block alt" id="contracting" aria-labelledby="contracting-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Contracting</div>
+        <h2 id="contracting-h">Certifications &amp; registration</h2>
+        <p>SEK Solutions LLC is certified and registered for federal contracting, and eligible for SDVOSB set-asides and Veterans First contracting.</p>
+      </div>
+
+      <table class="reg-table" aria-label="Certifications and registration details">
+        <tr><th scope="row">SDVOSB</th><td>Service-Disabled Veteran-Owned Small Business — SBA VetCert<span class="status-pill">Active</span><br><span style="color:var(--slate);font-size:14.5px">Entrance Nov 12, 2026 · Renewal Nov 12, 2029</span></td></tr>
+        <tr><th scope="row">VOSB</th><td>Veteran-Owned Small Business — SBA VetCert<span class="status-pill">Active</span><br><span style="color:var(--slate);font-size:14.5px">Entrance Nov 12, 2026 · Renewal Nov 12, 2029</span></td></tr>
+        <tr><th scope="row">SAM.gov</th><td>Registration active through <strong>August 6, 2027</strong></td></tr>
+        <tr><th scope="row">UEI</th><td><span class="mono">EZRPSEHWNG25</span></td></tr>
+        <tr><th scope="row">CAGE Code</th><td><span class="mono">23UF5</span></td></tr>
+        <tr><th scope="row">Core NAICS</th><td><span class="mono"><strong>611430</strong> (primary) · 488210 · 541614 · 561210 · 493110</span></td></tr>
+        <tr><th scope="row">Service area</th><td>Northwest Ohio / Southeast Michigan / Northeast Indiana (incl. Fort Wayne) — plus remote &amp; online delivery anywhere</td></tr>
+      </table>
+
+      <h3 style="font-size:22px;margin:44px 0 8px">Why contracting officers and primes work with SEK</h3>
+      <div class="diff-grid">
+        <div class="diff-item"><h4>Set-aside eligible</h4><p>Certified SDVOSB and VOSB — eligible for SDVOSB set-asides and Veterans First contracting.</p></div>
+        <div class="diff-item"><h4>A safety record that verifies itself</h4><p>Zero recordables across more than one million man-hours in an FRA/OSHA-regulated operating environment.</p></div>
+        <div class="diff-item"><h4>Owner-delivered</h4><p>The person who bids is the person who teaches — satisfying services self-performance requirements without subcontractor risk.</p></div>
+        <div class="diff-item"><h4>Shift-flexible delivery</h4><p>Sessions across all three shifts. Training fits a 24/7 operation instead of fighting it.</p></div>
+        <div class="diff-item"><h4>Single point of contact</h4><p>Direct scheduling and one accountable contact from award through delivery.</p></div>
+        <div class="diff-item"><h4>Teaming-ready</h4><p>A clean, certified SDVOSB partner for primes who need training delivery, course development, or safety consulting capacity. Reach us at <a href="mailto:contracts@seksolutionsllc.com">contracts@seksolutionsllc.com</a>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="block" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Contact</div>
+        <h2 id="contact-h">Get in touch</h2>
+        <p>Email is the way to reach us — pick the inbox that fits, and you'll hear back from the owner directly.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Contracting &amp; Teaming</h3>
+          <p>Set-asides, task orders, subcontracting, and teaming inquiries.</p>
+          <a class="email" href="mailto:contracts@seksolutionsllc.com">contracts@seksolutionsllc.com</a>
+        </div>
+        <div class="contact-card">
+          <h3>General</h3>
+          <p>Direct line to the owner for services and scheduling questions.</p>
+          <a class="email" href="mailto:james@seksolutionsllc.com">james@seksolutionsllc.com</a>
+        </div>
+        <div class="contact-card">
+          <h3>Information</h3>
+          <p>General information about the company and its services.</p>
+          <a class="email" href="mailto:info@seksolutionsllc.com">info@seksolutionsllc.com</a>
+        </div>
+      </div>
+      <div class="addr-bar">
+        <div class="addr-box">
+          <h3>Location</h3>
+          <p>SEK Solutions LLC<span>Sylvania, Ohio</span></p>
+        </div>
+        <div class="addr-box">
+          <h3>Service Area</h3>
+          <p>Northwest Ohio · Southeast Michigan · Northeast Indiana<span>Including the Fort Wayne metro — plus remote &amp; online delivery anywhere.</span></p>
+        </div>
+      </div>
+      <div class="cta-row" style="margin-top:28px">
+        <a class="btn btn-navy" href="mailto:contracts@seksolutionsllc.com">Start a Conversation</a>
+        <a class="btn" href="#contracting" style="border-color:var(--line-dark);color:var(--ink)">View Contracting Details</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>SEK Solutions LLC</h3>
+        <p>Certified Service-Disabled Veteran-Owned Small Business providing safety training delivery, safety consulting, e-learning &amp; course development, and security consulting.</p>
+        <p style="margin-top:12px">Sylvania, Ohio</p>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contracting">Contracting</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Registration</h3>
+        <ul>
+          <li>UEI: EZRPSEHWNG25</li>
+          <li>CAGE: 23UF5</li>
+          <li>Primary NAICS: 611430</li>
+          <li>SDVOSB · VOSB — SBA VetCert</li>
+          <li>SAM.gov active thru Aug 6, 2027</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SEK Solutions LLC. All rights reserved.</span>
+      <span>seksolutionsllc.com</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
